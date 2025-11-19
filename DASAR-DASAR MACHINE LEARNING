@@ -1,0 +1,235 @@
+1.1 Apa Itu Machine Learning?
+
+Machine Learning adalah cabang dari kecerdasan buatan yang memberi kemampuan kepada komputer untuk belajar dari pengalaman. Pengalaman yang dimaksud tentu bukan “pengalaman hidup”, tapi data.
+
+Komputer diberi banyak contoh, lalu secara perlahan ia menemukan pola. Begitu pola itu terbentuk, komputer bisa membuat keputusan atau prediksi tanpa menunggu manusia menuliskan aturan secara manual.
+
+Bayangkan kamu adalah analis keamanan yang membaca ribuan log jaringan setiap hari. Setiap log berisi IP, port, ukuran paket, sampai payload. Otakmu pasti lama-lama hafal pola mana yang normal dan mana yang mencurigakan. Machine Learning melakukan hal sama, tapi tanpa lelah, tanpa bosan, dan bisa membaca jutaan log dalam hitungan detik.
+
+Itulah mengapa ML menjadi tulang punggung cybersecurity modern.
+
+1.2 Jenis-Jenis Machine Learning
+
+a. Supervised Learning
+
+Ini adalah jenis pembelajaran di mana model diberikan contoh yang sudah memiliki “jawaban”. Data seperti ini disebut data berlabel.
+
+Misalnya:
+
+Contoh email + label “spam”
+
+Contoh traffic + label “normal” atau “malicious”
+
+
+Model mempelajari hubungan antara data dan label tersebut. Setelah latihan, ia bisa menebak sendiri apakah sebuah email baru termasuk spam atau tidak.
+
+Dalam dunia keamanan siber, supervised learning banyak digunakan untuk:
+
+Klasifikasi malware
+
+Deteksi phishing
+
+Intrusion detection (IDS)
+
+
+b. Unsupervised Learning
+
+Jenis pembelajaran ini berbeda. Data tidak memiliki label. Komputer hanya diberikan kumpulan data mentah dan diminta mencari pola sendiri.
+
+Dalam cybersecurity, pendekatan ini sangat penting karena:
+
+Serangan baru muncul setiap hari
+
+Banyak ancaman zero-day tidak punya contoh label
+
+
+Unsupervised learning bisa menemukan perilaku jaringan yang “tidak biasa” meskipun tidak tahu itu serangan jenis apa. Teknik ini cocok untuk:
+
+Deteksi anomali
+
+Deteksi insider threat
+
+Clustering aktivitas pengguna
+
+
+c. Reinforcement Learning
+
+Di sini model belajar lewat proses trial and error. Mirip hewan dilatih: lakukan tindakan → dapat hadiah atau hukuman → lama-lama jadi pintar.
+
+Meski jarang dipakai pada deteksi ancaman, RL berguna untuk:
+
+AI untuk pertahanan otomatis
+
+Firewall adaptif
+
+Sistem penjadwalan patch otomatis
+
+1.3 Algoritma Penting dalam Cybersecurity
+
+Setiap algoritma punya keunggulan masing-masing.
+
+Naive Bayes
+
+Algoritma statistik sederhana namun kuat. Digunakan untuk mengenali konten berdasarkan kata-kata yang muncul.
+
+Contoh penggunaan:
+
+Deteksi email phishing
+
+Klasifikasi log sederhana
+
+
+Random Forest
+
+Algoritma yang terdiri dari banyak pohon keputusan. Ia menggabungkan pendapat dari “banyak pohon” sehingga hasilnya lebih akurat.
+
+Banyak dipakai untuk:
+
+Deteksi malware
+
+Analisis trafik jaringan
+
+Identifikasi domain berbahaya
+
+
+K-Means Clustering
+
+Cocok untuk melakukan pengelompokan data tanpa label.
+
+Contoh penggunaan:
+
+Membedakan trafik “normal” dari trafik “aneh”
+
+Kelompokkan user berdasarkan perilaku login
+
+Deteksi botnet baru
+
+
+Isolation Forest
+
+Algoritma khusus untuk menemukan anomali. Ia bekerja dengan memisahkan data “aneh” dari data “normal”.
+
+Cocok untuk:
+
+Deteksi aktivitas mencurigakan pada server
+
+Analisis akses API
+
+Deteksi pencurian data (DLP
+
+1.4 Bagaimana Machine Learning Dibangun (Pipeline ML)
+
+Sebuah model ML tidak tercipta begitu saja. Ada tahap-tahap yang harus dilewati.
+
+1. Pengumpulan Data
+
+Data bisa berupa:
+
+Log sistem
+
+PCAP jaringan
+
+Laporan IDS
+
+Email
+
+File biner malware
+
+
+Semakin banyak data, semakin baik modelnya.
+
+2. Pembersihan Data (Preprocessing)
+
+Data mentah itu kacau. Ada yang kosong, duplikat, format kacau. Inilah tahap operasi bersih-bersih:
+
+Menghapus noise
+
+Menghapus nilai kosong
+
+Menormalkan ukuran angka
+
+
+3. Ekstraksi Fitur (Feature Extraction)
+
+Model tidak bisa membaca data mentah. Kita ambil bagian pentingnya saja.
+
+Contoh fitur:
+
+IP sumber
+
+Port tujuan
+
+Ukuran paket
+
+Jumlah request per menit
+
+
+4. Training Model
+
+Pada tahap inilah komputer “belajar”.
+
+5. Evaluasi
+
+Setelah belajar, model diuji. Seberapa akurat ia mendeteksi ancaman?
+
+6. Deployment
+
+Kalau model berhasil:
+
+Dimasukkan ke SIEM
+
+Diintegrasikan ke IDS/IPS
+
+Dipakai untuk analisis otomatis
+
+1.5 Cara Mengukur Kualitas Model
+
+Accuracy
+
+Seberapa banyak prediksi yang benar.
+
+Precision
+
+Seberapa banyak prediksi “ancaman” yang benar-benar ancaman.
+
+Recall
+
+Seberapa banyak ancaman yang berhasil ditemukan.
+
+F1-Score
+
+Gabungan tepat antara precision dan recall.
+
+Dalam cybersecurity, precision dan recall lebih penting daripada accuracy.
+Kenapa?
+Karena:
+
+False positive bikin admin stres
+
+False negative bikin serangan lolos
+
+1.6 Tantangan Machine Learning di Cybersecurity
+
+Cybersecurity itu unik. Lingkungannya keras, cepat berubah, dan penuh aktor jahat. Tantangannya antara lain:
+
+Data Tidak Seimbang
+
+Serangan jarang terjadi. Misalnya 99% traffic normal, 1% serangan. Model bisa tertipu.
+
+False Positives
+
+Model terlalu sensitif → semua dianggap ancaman.
+Ini bikin alert fatigue.
+
+Adversarial Attack
+
+Penyerang pintar. Mereka bisa memodifikasi input agar model salah membaca.
+Contoh:
+
+Malware yang mengaburkan fitur
+
+Request jaringan yang dibuat mirip normal
+
+
+AI yang dipakai di cybersecurity harus kuat menghadapi serangan seperti ini.
+
