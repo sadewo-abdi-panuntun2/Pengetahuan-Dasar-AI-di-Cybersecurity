@@ -1,0 +1,103 @@
+Pendahuluan
+
+Artificial Intelligence (AI) adalah kemampuan komputer untuk meniru kecerdasan manusia. Ini bukan cuma sekadar robot pintar, tapi sistem yang bisa mengenali pola, belajar dari pengalaman, dan membuat keputusan. Dalam cybersecurity, AI sangat penting karena serangan siber modern semakin kompleks dan cepat. Manusia sendirian tidak bisa memantau semua sistem, tapi AI bisa membantu mendeteksi ancaman secara otomatis dan real-time.
+
+
+1. Apa itu AI?
+
+AI adalah bidang ilmu komputer yang membuat mesin bisa melakukan hal-hal yang biasanya memerlukan kecerdasan manusia, misalnya:
+
+Mengenali pola → Misal: pola login abnormal di server
+
+Belajar dari data → Misal: mengenali malware baru dari sampel lama
+
+Mengambil keputusan → Misal: memblokir IP yang mencurigakan
+
+
+Contoh nyata:
+Bayangkan sebuah bank memiliki ribuan transaksi per detik. AI bisa memantau semua transaksi ini, mendeteksi yang mencurigakan, dan memberi peringatan sebelum kerugian terjadi. Manusia sendirian hampir mustahil melakukan ini.
+
+
+2. Machine Learning (ML)
+
+ML adalah cabang dari AI yang memungkinkan sistem belajar dari data untuk membuat prediksi atau keputusan. Dalam cybersecurity, ML digunakan untuk mendeteksi malware, phishing, intrusi jaringan, dan aktivitas abnormal.
+
+Tipe Machine Learning
+
+1. Supervised Learning (Belajar Terawasi)
+
+Sistem belajar dari data yang sudah diberi label
+
+Contoh: klasifikasi email spam vs aman
+
+
+
+2. Unsupervised Learning (Belajar Tidak Terawasi)
+
+Sistem belajar dari data tanpa label
+
+Contoh: mendeteksi aktivitas abnormal di jaringan
+
+
+
+3. Reinforcement Learning (Belajar dengan Penguatan)
+
+Sistem belajar dari trial & error dengan reward/punishment
+
+Contoh: AI belajar merespons serangan siber simulasi
+
+
+3. Deep Learning (DL)
+
+Deep Learning adalah ML tingkat lanjut yang menggunakan jaringan neural berlapis-lapis untuk memproses data kompleks.
+
+Digunakan untuk data besar atau kompleks seperti: log sistem, traffic jaringan, file executable malware
+
+Contoh di cybersecurity:
+
+Deteksi malware baru
+
+Analisis pola serangan dalam traffic jaringan
+
+
+4. Data: Bahan Bakar AI
+
+AI hanya sekuat data yang dipakai. Data harus:
+
+Bersih → bebas noise atau error
+
+Relevan → sesuai masalah yang ingin diselesaikan
+
+Cukup banyak → lebih banyak data = model lebih akurat
+
+
+Contoh: untuk deteksi malware, dataset harus berisi file malware dan file aman, supaya model bisa belajar perbedaan pola mereka.
+
+
+
+5. Contoh Praktis AI di Cybersecurity
+
+Misal ingin mendeteksi login abnormal:
+
+1. Kumpulkan data login: waktu, IP, username, lokasi
+
+
+2. Gunakan ML supervised untuk melatih model
+
+
+3. Deploy model: AI otomatis memberi peringatan atau memblokir login mencurigakan
+
+
+
+6. Ringkasan Bab 1
+
+AI = komputer meniru kecerdasan manusia
+
+ML = AI belajar dari data
+
+Deep Learning = ML untuk data kompleks
+
+Data berkualitas = kunci AI
+
+AI bisa otomatis mendeteksi ancaman dan merespons serangan
+
