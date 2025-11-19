@@ -1,0 +1,218 @@
+2.1 Apa Itu Cybersecurity?
+
+Cybersecurity adalah bidang yang berfokus pada melindungi sistem komputer, jaringan, aplikasi, dan data dari ancaman. Ancaman ini bisa datang dari mana saja—peretas individu, kelompok kriminal, bahkan negara. Intinya, cybersecurity adalah upaya menjaga dunia digital agar tetap aman, stabil, dan bisa dipercaya.
+
+Kita hidup di era di mana data menjadi aset paling bernilai. Data medis, data keuangan, data kependudukan, hingga rahasia negara semuanya disimpan dalam bentuk digital. Karena itu, dunia maya tidak pernah benar-benar sunyi. Selalu ada upaya untuk mencuri, merusak, atau memanipulasi informasi.
+
+Cybersecurity adalah benteng untuk melindungi dunia yang tidak kelihatan tetapi mengatur hidup kita sehari-hari.
+
+2.2 Kenapa Cybersecurity Penting?
+
+Pentingnya cybersecurity bisa terasa kalau kamu melihat kehidupan modern. Hampir semua kegiatan manusia bergantung pada sistem digital — bank online, media sosial, transportasi, pemerintahan, militer, perusahaan teknologi. Begitu satu bagian dari jaringan itu runtuh, dampaknya bisa merembet ke mana-mana.
+
+Serangan siber bukan cuma tentang hacker menembus server untuk pamer kemampuan.
+Serangan siber bisa menyebabkan:
+
+Rumah sakit berhenti beroperasi
+
+Listrik padam
+
+Sistem ATM tidak bisa digunakan
+
+Data penduduk bocor
+
+Perusahaan rugi miliaran
+
+
+Dan yang tidak kalah serius:
+kepercayaan masyarakat bisa hilang.
+
+Itulah mengapa negara menganggap cybersecurity sebagai bagian dari pertahanan nasional. Sama pentingnya dengan keamanan darat, laut, dan udara.
+
+2.3 Fungsi Cybersecurity bagi Negara
+
+Setiap negara modern memiliki strategi keamanan siber. Tanpa itu, negara rentan terhadap sabotase digital. Fungsi utamanya ada tiga:
+
+1. Melindungi Infrastruktur Kritis
+
+Infrastruktur seperti:
+
+Listrik
+
+Air
+
+Transportasi
+
+Bandar udara
+
+Perbankan
+
+Komunikasi
+
+
+semuanya berjalan menggunakan komputer. Jika peretas bisa mengambil alih sistem ini, satu kota bahkan satu negara bisa lumpuh.
+
+2. Menjaga Kerahasiaan dan Integritas Data
+
+Pemerintah menyimpan banyak informasi sensitif:
+
+Data warga
+
+Data intelijen
+
+Data pertahanan
+
+Informasi diplomatik
+
+
+Data seperti ini harus selalu dijaga kerahasiannya. Kebocoran data bisa berdampak pada keamanan nasional dan hubungan internasional.
+
+3. Mengamankan Ekonomi Digital
+
+Perdagangan modern terdiri dari jutaan transaksi digital setiap hari. Pembayaran, investasi, hingga pengiriman barang semuanya bergantung pada jaringan online. Negara wajib menjaga transaksi agar:
+
+aman
+
+tidak disusupi
+
+tidak ditipu
+
+
+Tanpa cybersecurity, ekonomi digital bisa runtuh.
+
+2.4 Peran Cybersecurity bagi Perusahaan
+
+Perusahaan punya kepentingan berbeda. Mereka ingin:
+
+aset aman
+
+pelanggan percaya
+
+bisnis berjalan
+
+
+Cybersecurity membantu mereka mencegah serangan seperti:
+
+ransomware
+
+pengambilalihan akun
+
+sabotase internal
+
+pencurian data karyawan
+
+gangguan operasional
+
+
+Perusahaan besar biasanya punya tim SOC (Security Operation Center) yang memantau ancaman 24 jam nonstop.
+
+2.5 Peran Cybersecurity Bagi Pengguna Biasa
+
+Meskipun tidak memegang data negara, setiap orang punya identitas digital.
+Data pribadi seperti:
+
+nomor telepon
+
+KTP
+
+foto
+
+password
+
+lokasi
+
+chat
+semuanya bisa dipakai pihak lain untuk penipuan atau pemerasan.
+
+
+Cybersecurity mengajari pengguna untuk:
+
+membuat kata sandi yang kuat
+
+tidak mengklik link sembarangan
+
+memahami phishing
+
+mengamankan perangkat sendiri
+
+
+Dunia digital aman jika setiap individu ikut menjaga diri.
+
+
+2.6 Lapisan-Lapisan Cybersecurity
+
+Cybersecurity tidak berdiri di satu titik. Ia memiliki beberapa lapisan perlindungan:
+
+1. Keamanan Jaringan
+
+Mencegah penyusup masuk ke jaringan.
+Contoh: firewall, IDS/IPS, VPN.
+
+2. Keamanan Aplikasi
+
+Memastikan aplikasi bebas dari bug berbahaya seperti XSS, SQLi, atau RCE.
+
+3. Keamanan Data
+
+Mengamankan data saat disimpan dan saat dikirim.
+Contoh: enkripsi, hashing, tokenisasi.
+
+4. Keamanan Endpoint
+
+Melindungi perangkat seperti laptop, server, dan ponsel dari malware.
+
+5. Keamanan Manusia
+
+Kelemahan terbesar tidak selalu teknologi.
+Banyak serangan sukses karena manusia tertipu — social engineering.
+
+Lapisan ini bekerja bersama membentuk benteng pertahanan.
+
+
+2.7 Ancaman yang Sering Terjadi
+
+Cybersecurity menghadapi berbagai ancaman. Beberapa di antaranya:
+
+Malware
+
+Perangkat lunak berbahaya yang bisa mencuri data, mengenkripsi file, atau mengambil alih sistem.
+
+Phishing
+
+Penipuan yang memancing korban mengklik link atau memasukkan password.
+
+DDoS
+
+Menyerang server dengan permintaan palsu sampai server mati.
+
+Zero-Day Attack
+
+Serangan yang memanfaatkan celah yang belum diketahui developer.
+
+Insider Threat
+
+Ancaman dari orang dalam: karyawan atau admin yang menyalahgunakan akses.
+
+Cybersecurity bertugas mengenali semua pola ini dan memblokirnya secepat mungkin.
+
+
+2.8 Tantangan Dunia Cybersecurity
+
+Dunia siber sangat cepat berubah.
+Serangan baru muncul tiap hari. Alat baru, teknik baru, pola baru. Tidak ada istirahat.
+
+Tantangannya:
+
+volume data makin besar
+
+alat peretas makin canggih
+
+AI dipakai untuk menyerang
+
+banyak sistem masih kuno
+
+kurangnya talenta cybersecurity di seluruh dunia
+
+
+Karena itu cybersecurity menjadi profesi yang makin penting dan strategis.
+
