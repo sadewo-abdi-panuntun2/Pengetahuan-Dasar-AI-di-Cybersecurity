@@ -1,0 +1,203 @@
+Bab 1: Pengantar SQL Injection
+
+SQL Injection atau SQLi adalah teknik serangan yang memanipulasi query SQL melalui input pengguna dengan tujuan mengakses, mengubah, atau merusak data dalam database. Serangan ini muncul karena aplikasi tidak melakukan validasi input dengan benar sehingga penyerang bisa memasukkan perintah SQL berbahaya.
+
+SQLi termasuk salah satu kerentanan paling terkenal dalam keamanan web. Meski konsepnya sederhana, dampaknya bisa sangat besar: mulai dari membaca data sensitif hingga mengambil alih seluruh server database.
+
+Bab 2: Apa Itu Query SQL?
+
+SQL (Structured Query Language) adalah bahasa yang digunakan untuk berkomunikasi dengan database. Contoh query sederhana:
+
+SELECT * FROM users WHERE username='sadewo';
+
+Aplikasi web biasanya membuat query SQL berdasarkan input pengguna. Di sinilah celah mulai muncul.
+
+Jika aplikasi tidak memfilter input, penyerang bisa "menyisipkan" instruksi baru.
+
+Bab 3: Bagaimana SQL Injection Terjadi?
+
+Contoh sederhana
+
+Misal ada form login dengan kode berikut:
+
+SELECT * FROM users WHERE username='$user' AND password='$pass';
+
+Jika penyerang memasukkan:
+
+user: admin
+pass: ' OR '1'='1
+
+Maka query berubah menjadi:
+
+SELECT * FROM users WHERE username='admin' AND password='' OR '1'='1';
+
+Bagian '1'='1' selalu bernilai benar. Hasilnya, penyerang bisa login tanpa password.
+
+Bab 4: Jenis-Jenis SQL Injection
+
+1. SQL Injection Klasik (In-band)
+
+Penyerang mendapatkan hasil langsung dari server.
+
+2. Blind SQL Injection
+
+Server tidak menampilkan hasil, tetapi penyerang bisa menguji kondisi menggunakan respon HTTP. Misalnya:
+
+?id=10 AND 1=1 --
+
+Jika halaman normal muncul, kondisi benar. Jika halaman error, kondisi salah.
+
+Dua teknik umum blind SQLi:
+
+Boolean-based
+
+Time-based (menggunakan perintah sleep)
+
+
+3. Error-based SQL Injection
+
+Penyerang memicu error pada database dan membaca informasi sensitif dari pesan error.
+
+4. Out-of-band SQL Injection
+
+Server mengirim respon melalui saluran lain (misalnya DNS), dipakai saat in-band tidak mungkin.
+
+Bab 5: Struktur Serangan SQLi
+
+Serangan SQLi bekerja dengan membangun pola:
+
+1. Menemukan input yang rentan
+
+Form login, search bar, parameter URL, API parameter.
+
+2. Menginjeksi payload
+
+Payload adalah kode tambahan yang mengubah logika query. Contoh payload dasar:
+
+'
+' OR 1=1 --
+" OR "1"="1
+
+3. Mencoba mengekstrak data
+
+Contoh query ekstraksi:
+
+UNION SELECT username, password FROM users;
+
+4. Mengambil alih database
+
+Jika hak akses besar, penyerang bisa:
+
+membuat user baru
+
+menghapus tabel
+
+menulis file ke server (bergantung konfigurasi)
+
+
+Bab 6: Tahap-Tahap Serangan SQLi Secara Lengkap
+
+1. Informasi Awal
+
+Penyerang mencari endpoint yang menerima input.
+
+2. Pengujian Kerentanan
+
+Menggunakan payload sederhana seperti:
+
+'
+"
+--
+#
+
+Jika muncul error SQL, berarti rawan.
+
+3. Menentukan jumlah kolom
+
+Menggunakan UNION:
+
+?id=1 UNION SELECT 1 --
+?id=1 UNION SELECT 1,2 --
+?id=1 UNION SELECT 1,2,3 --
+
+Jika jumlah kolom cocok, server memberikan respon normal.
+
+4. Mengambil struktur database
+
+Pada MySQL:
+
+SELECT schema_name FROM information_schema.schemata;
+
+Di SQLi:
+
+?id=1 UNION SELECT schema_name,2 FROM information_schema.schemata;
+
+5. Mengambil data tabel sensitif
+
+Misalnya mengambil username dan hash password:
+
+?id=1 UNION SELECT username,password FROM users;
+
+Bab 7: Dampak SQL Injection
+
+SQLi bisa menyebabkan:
+
+Kebocoran data pribadi
+
+Perusakan database
+
+Modifikasi transaksi
+
+Pengambilalihan akun admin
+
+Eksekusi perintah OS (pada database tertentu)
+
+Server takeover (pada kasus ekstrim)
+
+
+SQLi termasuk ancaman besar karena satu input kecil bisa merusak seluruh sistem.
+
+Bab 8: Cara Mencegah SQL Injection
+
+1. Prepared Statements (Parameterized Query)
+
+Ini metode paling aman. Contoh aman:
+
+$stmt = $db->prepare('SELECT * FROM users WHERE username=? AND password=?');
+$stmt->execute([$user, $pass]);
+
+2. Validasi & Sanitasi Input
+
+batasi karakter input
+
+gunakan white-list (boleh ini, selainnya ditolak)
+
+
+3. Gunakan ORM
+
+Framework modern seperti Laravel, Django, dan Node ORM menyediakan query aman.
+
+4. Matikan error message untuk user
+
+Jangan biarkan pesan error SQL muncul di browser.
+
+5. Gunakan Hak Akses yang Minim
+
+Database user yang dipakai aplikasi harus memiliki izin minimal.
+
+Bab 9: Studi Kasus Serangan Nyata
+
+SQLi telah menyebabkan banyak insiden, seperti:
+
+kebocoran jutaan data akun pengguna
+
+peretasan situs pemerintahan
+
+pencurian data kartu kredit
+
+
+Banyak serangan besar terjadi karena aplikasi masih memakai query mentah.
+
+Bab 10: Penutup
+
+SQL Injection adalah serangan klasik namun tetap menjadi ancaman besar di dunia keamanan siber. Memahami cara kerjanya membantu admin, developer, dan praktisi keamanan membangun sistem yang lebih aman.
