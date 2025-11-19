@@ -1,0 +1,219 @@
+Jaringan komputer adalah sistem yang menghubungkan dua perangkat atau lebih agar dapat 
+saling bertukar data. Setiap perangkat yang terhubung disebut node. Tujuan utama jaringan
+adalah memungkinkan komunikasi, berbagi sumber daya, dan
+mempermudah akses informasi.
+
+Konsep jaringan modern berkembang dari kebutuhan manusia untuk saling berkirim pesan secara cepat.
+Dalam perkembangannya, teknologi jaringan melibatkan perangkat keras, perangkat lunak, protokol komunikasi,
+dan media transmisi.
+
+Bab 2: Komponen Utama Jaringan
+
+1. Perangkat Jaringan
+
+Router: Menghubungkan beberapa jaringan dan mengatur rute paket data.
+
+Switch: Menghubungkan banyak perangkat dalam satu jaringan lokal (LAN) dan mengarahkan data
+berdasarkan alamat MAC.
+
+Modem: Mengubah sinyal digital menjadi analog dan sebaliknya agar dapat ditransmisikan melalui media tertentu.
+
+Access Point (AP): Menyediakan koneksi jaringan nirkabel.
+
+
+2. Media Transmisi
+
+Kabel UTP/STP: Media kabel tembaga untuk LAN.
+
+Fiber Optik: Menggunakan cahaya untuk kecepatan tinggi dan jarak jauh.
+
+Nirkabel (Wi-Fi): Menggunakan gelombang radio untuk koneksi tanpa kabel.
+
+3. Perangkat Akhir (End Device)
+
+Contohnya komputer, smartphone, printer jaringan, server, dan kamera IP.
+
+Bab 3: Alamat Jaringan dan Identifikasi
+
+Agar perangkat dapat saling berkomunikasi, setiap perangkat membutuhkan identitas.
+
+Alamat MAC
+
+Alamat fisik yang tertanam di perangkat jaringan. Bersifat unik dan digunakan dalam komunikasi tingkat data link.
+
+Alamat IP
+
+Alamat logis yang digunakan untuk mengidentifikasi perangkat dalam jaringan berbasis IP. Terdapat dua versi:
+
+IPv4: 32 bit, format desimal titik.
+
+IPv6: 128 bit, format heksadesimal.
+
+
+Bab 4: Model OSI dan TCP/IP
+
+Model OSI (Open Systems Interconnection)
+
+Model OSI terdiri dari tujuh lapisan:
+
+1. Physical: Media fisik, kabel, sinyal.
+
+
+2. Data Link: Pengalamatan MAC dan frame.
+
+
+3. Network: Routing dan IP.
+
+
+4. Transport: TCP/UDP, manajemen koneksi.
+
+
+5. Session: Mengatur sesi komunikasi.
+
+
+6. Presentation: Format data, enkripsi.
+
+
+7. Application: Aplikasi jaringan seperti HTTP, FTP, DNS.
+
+
+
+Model TCP/IP
+
+Model ini lebih praktis dan digunakan secara nyata:
+
+1. Network Access
+
+
+2. Internet
+
+
+3. Transport
+
+
+4. Application
+
+
+
+Bab 5: Cara Kerja Pengiriman Data
+
+Pada jaringan modern, data tidak dikirim sebagai satu blok besar, tetapi dipecah menjadi paket-paket. Proses pengiriman berjalan sebagai berikut:
+
+1. Aplikasi membuat data.
+
+
+2. Lapisan transport (TCP/UDP) membungkus data menjadi segment.
+
+
+3. Lapisan network menambahkan alamat IP dan membuat paket.
+
+
+4. Lapisan data link membuat frame dan menambahkan alamat MAC.
+
+
+5. Media fisik mengirimkan bit melalui kabel atau udara.
+
+
+6. Router meneruskan paket berdasarkan tabel routing.
+
+
+7. Perangkat penerima menyusun kembali paket menjadi data utuh.
+
+
+
+Bab 6: Protokol Penting Dalam Jaringan
+
+1. TCP (Transmission Control Protocol)
+
+Menjamin keandalan pengiriman data dengan mekanisme acknowledgment dan retransmission.
+
+2. UDP (User Datagram Protocol)
+
+Lebih cepat tetapi tidak menjamin keandalan. Cocok untuk streaming dan game online.
+
+3. HTTP/HTTPS
+
+Protokol untuk komunikasi web. HTTPS menggunakan enkripsi TLS untuk keamanan.
+
+4. DNS
+
+Menerjemahkan nama domain menjadi alamat IP.
+
+5. DHCP
+
+Memberikan alamat IP secara otomatis ke perangkat.
+
+Bab 7: Topologi Jaringan
+
+Topologi adalah bentuk atau pola susunan jaringan. Yang umum digunakan:
+
+Bus: Semua perangkat berada pada satu jalur kabel.
+
+Star: Semua perangkat terhubung ke switch pusat.
+
+Ring: Perangkat tersusun melingkar.
+
+Mesh: Setiap perangkat saling terhubung.
+
+
+Topologi star adalah yang paling umum di LAN modern.
+
+Bab 8: Jenis-Jenis Jaringan
+
+LAN (Local Area Network)
+
+Jaringan lokal dalam rumah, kantor, atau gedung.
+
+MAN (Metropolitan Area Network)
+
+Mencakup area kota.
+
+WAN (Wide Area Network)
+
+Menghubungkan jaringan dalam jarak sangat jauh. Contoh terbesar: internet.
+
+Bab 9: Cara Kerja Internet
+
+Internet adalah jaringan dari banyak jaringan. Router menjadi tulang punggung yang menghubungkan seluruh dunia.
+
+Ketika seseorang membuka website:
+
+1. Browser meminta DNS untuk mencari alamat IP.
+
+
+2. Browser mengirim permintaan HTTP/HTTPS ke server.
+
+
+3. Server merespons dengan data halaman.
+
+
+4. Data dipecah menjadi paket dan dikirim melalui berbagai rute.
+
+
+5. Perangkat penerima menyusun kembali data menjadi halaman web.
+
+
+
+Bab 10: Keamanan Jaringan Dasar
+
+Keamanan jaringan melibatkan:
+
+Firewall
+
+Enkripsi
+
+VPN
+
+IDS/IPS
+
+Pembaruan sistem
+
+Pengelolaan akses dan autentikasi
+
+
+Keamanan penting karena setiap data yang bergerak dalam jaringan berpotensi disadap, diubah, atau diserang.
+
+Bab 11: Penutup
+
+Pemahaman jaringan adalah fondasi utama dalam dunia teknologi modern. Dengan menguasai cara kerja jaringan, seseorang dapat memahami 
+internet, cybersecurity, pemrograman jaringan, hingga infrastruktur server.
